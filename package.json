@@ -1,0 +1,16 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bl": "^4.1.0",
+    "learnyounode": "^4.2.2",
+    "through2-map": "^3.0.0"
+  },
+  "scripts": {
+    "menu": "yarn learnyounode",
+    "verify": "yarn learnyounode verify",
+    "print": "yarn learnyounode print"
+  }
+}
