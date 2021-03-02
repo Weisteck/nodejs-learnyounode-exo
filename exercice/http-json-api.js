@@ -31,18 +31,22 @@ http.createServer((request, response) => {
     const parsedUrl = url.parse(request.url, true);
     const time = new Date(parsedUrl.query.iso);
     let result;
-    if (/^\/api\/parsetime/.test(request.url))
-        result = parseTime(time)
-    else if (/^\/api\/unixtime/.test(request.url))
-        result = unixTime(time)
+
+    if (/^\/api\/parsetime/.test(request.url)) result = parseTime(time)
+    else if (/^\/api\/unixtime/.test(request.url)) result = unixTime(time)
     
-    if (result)
-        response.end(JSON.stringify(result))
-    else
-        response.end('pas de reponse')
+    if (result) response.end(JSON.stringify(result))
+    else response.end('pas de reponse')
 
     // if ( request.method === 'GET') {
     //     url = url.parse(request.url, true)
     //     response.end(JSON.stringify(parseQuery(url)))
     // } else response.end()
+
+    // Amelioration possible
+    // if ( request.method !== 'GET') response.end()
+    // url = url.parse(request.url, true)
+    // response.end(JSON.stringify(parseQuery(url)))
 }).listen(port)
+
+// corection a rajouter 
