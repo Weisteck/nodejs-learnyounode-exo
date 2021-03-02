@@ -5,12 +5,13 @@
   "license": "MIT",
   "dependencies": {
     "bl": "^4.1.0",
+    "expressworks": "^3.4.3",
     "learnyounode": "^4.2.2",
     "through2-map": "^3.0.0"
   },
   "scripts": {
-    "menu": "yarn learnyounode",
-    "verify": "yarn learnyounode verify",
-    "print": "yarn learnyounode print"
+    "menu": "yarn expressworks",
+    "verify": "yarn expressworks verify",
+    "print": "yarn expressworks print"
   }
 }
