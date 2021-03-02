@@ -5,9 +5,10 @@ const app = express()
 
 const [_node, _path, port, fileName ] = process.argv;
 
-app.get('/books', (request, response) => {
+// _ devant une variable indique qu'on ne s'en sert pas mais quel doit etre la
+app.get('/books', (_request, response) => {
         fs.readFile(fileName, (error, data) => {
-            if(error) response.send(500)
+            if(error) response.sendStatus(500);
             response.json(JSON.parse(data))
         })
 }).listen(port)
